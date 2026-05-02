@@ -1,0 +1,12 @@
+{
+  "name": "team-task-manager",
+  "version": "1.0.0",
+  "description": "Team Task Manager with role-based access control",
+  "scripts": {
+    "postinstall": "cd server && npm install && npx prisma generate && cd ../client && npm install && npm run build",
+    "start": "cd server && npx prisma db push && node src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
